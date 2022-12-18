@@ -1,3 +1,15 @@
+function random(num) {
+    return Math.floor(Math.random() * num);
+}
+
+function rainbow_color(e) {
+    let randomColor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    if (mouseDown && !mouseUp) {
+        return randomColor;
+    }
+    return;
+}
+
 //input column and row of the canvas
 const container = document.querySelector('.container');
 let row = prompt("rows of the canvas");
@@ -12,3 +24,22 @@ for (let i = 1; i <= (row * column); i++) {
     item.className = "grid-item";
     container.appendChild(item);
 }
+
+let mouseDown = false;
+let mouseUp = false;
+
+container.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    mouseDown = true;
+    mouseUp = false;
+    e.target.style.backgroundColor = rainbow_color();
+})
+container.addEventListener('mouseover', (e) => {
+    e.preventDefault();
+    e.target.style.backgroundColor = rainbow_color();
+})
+container.addEventListener('mouseup', (e) => {
+    e.preventDefault();
+    mouseUp = true;
+    e.target.style.backgroundColor = rainbow_color();
+})

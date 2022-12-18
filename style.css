@@ -1,0 +1,13 @@
+.container {
+    display: inline-grid;
+    width: 900px;
+    height: 900px;
+    /*grid-template-rows: auto auto;*/
+    /*grid-template-columns: repeat(8, auto);*/
+}
+
+.grid-item {
+    border: black solid 1px;
+    padding: 10px;
+    text-align: center;
+}

@@ -1,9 +1,6 @@
 .container {
     display: inline-grid;
-    /*width: 300px;
-    height: 300px;*/
-    /*grid-template-rows: auto auto;*/
-    /*grid-template-columns: repeat(8, auto);*/
+    margin: 10px
 }
 
 .grid-item {
@@ -17,3 +14,15 @@
     border: black;
 }
 */
+
+.page {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: lightblue;
+    border: 2px solid purple
+}
+
+.canvasSize {
+    margin-bottom: 10px;
+}

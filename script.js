@@ -79,6 +79,10 @@ const changeSize = document.querySelector('.changeSize');
 rInput.addEventListener('click', () => clearInput(rInput));
 cInput.addEventListener('click', () => clearInput(cInput));
 changeSize.addEventListener('click', () => {
+    row = rInput.value;
+    console.log(row);
+    column = cInput.value;
+    console.log(column);
     deleteCanvas(container);
     createCanvas(rInput.value, cInput.value)
 });

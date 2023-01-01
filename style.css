@@ -18,6 +18,7 @@
 .page {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 50px;
     background-color: lightblue;
     border: 2px solid purple
